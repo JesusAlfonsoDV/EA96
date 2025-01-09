@@ -9,10 +9,10 @@ int validatePositiveInt() {
     do {
         printf("Introduce un numero positivo: ");
         scanf("%d", &num);
-        if (num <= 0) {
+        if (num < 0) {
             printf("El numero no es positivo.\n");
         }
-    } while (num <= 0);
+    } while (num < 0);
     return num;
 }
 
