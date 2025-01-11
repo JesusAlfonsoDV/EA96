@@ -6,26 +6,22 @@
 #include <stdio.h>
 #include <string.h>
 
-char str[100], original[100], phrase[100];
-//int original, reversed, phrase;
-void getInput(char* phrase){
-
+char str[100], original[100];
+void getInput(char* phrase) {
     printf("Ingresa una cadena de caracteres: ");
-    scanf("%s", original);
+    fgets(phrase, 100, stdin);
 }
 
 //char *reversed
-void reverseString(char* original, char* reversed(char original[])) {
-        int longitud = strlen(original);
-        char temporal;
-        for (int izquierda = 0, derecha = longitud - 1; izquierda < (longitud / 2);
-             izquierda++, derecha--) {
-            temporal = original[izquierda];
-            original[izquierda] = original[derecha];
-            original[derecha] = temporal;
-             }
-
-
+void reverseString(char* original) {
+    int longitud = strlen(original);
+    char temporal;
+    // Invertir
+    for (int izquierda = 0, derecha = longitud - 1; izquierda < (longitud / 2); izquierda++, derecha--) {
+        temporal = original[izquierda];
+        original[izquierda] = original[derecha];
+        original[derecha] = temporal;
+    }
 }
 
 
@@ -33,9 +29,10 @@ void reverseString(char* original, char* reversed(char original[])) {
 char phrase[100], original[100];*/
 int main() {
  getInput(original);
-
-    reverseString(reversed);
+    printf("La cadena de caracteres original es: %s", original);
+    reverseString(original);
     //reverseString();
-//printf("La cadena de caracteres original es: %s\n", original);
+
+printf("La cadena de caracteres invertida es: %s", original);
   return 0;
 }
